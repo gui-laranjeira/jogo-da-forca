@@ -1,0 +1,15 @@
+C:\Users\rishi\Source\Repos\jogo-da-forca\ProjetoFinal\bin\Debug\net6.0\ProjetoFinal.exe
+C:\Users\rishi\Source\Repos\jogo-da-forca\ProjetoFinal\bin\Debug\net6.0\ProjetoFinal.deps.json
+C:\Users\rishi\Source\Repos\jogo-da-forca\ProjetoFinal\bin\Debug\net6.0\ProjetoFinal.runtimeconfig.json
+C:\Users\rishi\Source\Repos\jogo-da-forca\ProjetoFinal\bin\Debug\net6.0\ProjetoFinal.dll
+C:\Users\rishi\Source\Repos\jogo-da-forca\ProjetoFinal\bin\Debug\net6.0\ProjetoFinal.pdb
+C:\Users\rishi\Source\Repos\jogo-da-forca\ProjetoFinal\obj\Debug\net6.0\ProjetoFinal.csproj.AssemblyReference.cache
+C:\Users\rishi\Source\Repos\jogo-da-forca\ProjetoFinal\obj\Debug\net6.0\ProjetoFinal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rishi\Source\Repos\jogo-da-forca\ProjetoFinal\obj\Debug\net6.0\ProjetoFinal.AssemblyInfoInputs.cache
+C:\Users\rishi\Source\Repos\jogo-da-forca\ProjetoFinal\obj\Debug\net6.0\ProjetoFinal.AssemblyInfo.cs
+C:\Users\rishi\Source\Repos\jogo-da-forca\ProjetoFinal\obj\Debug\net6.0\ProjetoFinal.csproj.CoreCompileInputs.cache
+C:\Users\rishi\Source\Repos\jogo-da-forca\ProjetoFinal\obj\Debug\net6.0\ProjetoFinal.dll
+C:\Users\rishi\Source\Repos\jogo-da-forca\ProjetoFinal\obj\Debug\net6.0\refint\ProjetoFinal.dll
+C:\Users\rishi\Source\Repos\jogo-da-forca\ProjetoFinal\obj\Debug\net6.0\ProjetoFinal.pdb
+C:\Users\rishi\Source\Repos\jogo-da-forca\ProjetoFinal\obj\Debug\net6.0\ProjetoFinal.genruntimeconfig.cache
+C:\Users\rishi\Source\Repos\jogo-da-forca\ProjetoFinal\obj\Debug\net6.0\ref\ProjetoFinal.dll
