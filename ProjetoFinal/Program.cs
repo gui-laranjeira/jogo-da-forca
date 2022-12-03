@@ -92,6 +92,8 @@ string GerarPalavra()
         "Vitoria", "Exemplo", "Adivinhar", "Xampu", "Personagem", "Traidor", "Cítrico", "Especular", "Afrouxar", "Laranjeira", "Composto", "Progenitor","Granizo", "Dispositivo",
         "Armadilha", "Poesia", "Umbilical", "Relacionamento", "Capacete", "Envelope", "Cronometragem",  "Calculadora", "Hipnotizar", "Marinheiro", "Perpetuo"};
 
+    //teste de commit
+
     return palavras[rd.Next(palavras.Length)];
 }
 
