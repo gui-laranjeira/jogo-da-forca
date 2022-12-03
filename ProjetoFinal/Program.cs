@@ -1,6 +1,7 @@
 ﻿bool vitoria = false, derrota = false, fim = false;
 int vidas = 6;
 
+
 string palavra = GerarPalavra().ToUpper();
 
 char[] letrasCertas = palavra.ToUpper().ToCharArray();
@@ -13,6 +14,7 @@ char[] jogadas = new char[27];
 
 //Se fosse lista não precisaria desse iterador;
 int iterador = 0;
+string tema = Tema(palavra);
 
 do
 {
@@ -82,15 +84,15 @@ else if (derrota)
 
 
 
+
 //Método para gerar palavra aleatória de uma array
 string GerarPalavra()
 {
     Random rd = new Random();
 
-    string[] palavras = {"Monitor", "Vizinho", "Gramado", "Toalha", "Terceiro", "Faringe", "Assustar", "Mordomo", "Rodovia", "Eternidade", "Capela",
-        "Fluxo","Sardinha", "Pirata", "Ferro", "Difícil", "Trancar", "Casamento", "Cativeiro", "Descriçao", "Maremoto", "Coletivo", "Grafite", "Civilizaçao",
-        "Vitoria", "Exemplo", "Adivinhar", "Xampu", "Personagem", "Traidor", "Cítrico", "Especular", "Afrouxar", "Laranjeira", "Composto", "Progenitor","Granizo", "Dispositivo",
-        "Armadilha", "Poesia", "Umbilical", "Relacionamento", "Capacete", "Envelope", "Cronometragem",  "Calculadora", "Hipnotizar", "Marinheiro", "Perpetuo"};
+    string[] palavras = { "AMARELO","BRANCO", "AZUL","VIOLETA","CACHORRO","PASSARINHO","GATO",
+                    "PEIXE","PIJAMA","CUECA","CASACO","JAQUETA","ESTOJO","CADERNO", "TESOURA","CORRETIVO","BOLO","MOUSSE","LASANHA",
+                    "PIZZA", "CANECA", "GARFO", "ESCUMADEIRA","PANELA","PEDIATRA","OFTALMOLOGISTA","CARDIOLOGISTA","NEUROLOGISTA"};
 
     //teste de commit
 
@@ -109,7 +111,7 @@ char[] ConstruirArrayDoTabuleiro(char[] letrasTabuleiro)
 void ConstruirTabuleiro(int vida, char[] letraTabuleiro, char[] jogadas)
 {
     Console.WriteLine(" *_____*");
-    Console.WriteLine($" |/    '         Vidas: {vidas}");
+    Console.WriteLine($" |/    '         Vidas: {vidas} - Dica: {tema}"); 
     Console.WriteLine(" |");
     Console.WriteLine(" |");
     Console.WriteLine(" |");
@@ -154,4 +156,66 @@ bool LetraValida(char jogada)
     {
         return false;
     }
+}
+
+
+
+static string Tema(string palavra)
+{
+    string tematica = " * ";
+
+    switch (palavra)
+    {
+        case "AMARELO":
+        case "BRANCO":
+        case "AZUL":
+        case "VIOLETA":
+            tematica = "COR";
+            break;
+
+        case "CACHORRO":
+        case "PASSARINHO":
+        case "GATO":
+        case "PEIXE":
+            tematica = "BICHINHO DE ESTIMAÇÃO";
+            break;
+
+        case "PIJAMA":
+        case "CUECA":
+        case "CASACO":
+        case "JAQUETA":
+            tematica = "VESTIMENTA";
+            break;
+
+        case "ESTOJO":
+        case "CADERNO":
+        case "TESOURO":
+        case "CORRETIVO":
+            tematica = "MATERIAL ESCOLAR";
+            break;
+
+        case "BOLO":
+        case "MOUSSE":
+        case "LASANHA":
+        case "PIZZA":
+            tematica = "COMIDA";
+            break;
+
+        case "CANECA":
+        case "GARFO":
+        case "ESCUMADEIRA":
+        case "PANELA":
+            tematica = "UTENSILIOS DE COZINHA";
+            break;
+
+        case "PEDIATRA":
+        case "OFTALMOLOGISTA":
+        case "CARDIOLOGISTA":
+        case "NEUROLOGISTA":
+            tematica = "ESPECIALIDADE MEDICA";
+            break;
+
+
+    }
+    return tematica;
 }
