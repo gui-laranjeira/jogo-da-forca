@@ -1,6 +1,6 @@
 ﻿bool vitoria = false, derrota = false, fim = false;
 int vidas = 6;
-
+string mensagem="";
 
 string palavra = GerarPalavra().ToUpper();
 
@@ -26,9 +26,11 @@ do
     {
         if (!jogadas.Contains(jogada))
         {
+            
             jogadas[iterador] = jogada;
             iterador++;
             bool acerto = false;
+            
 
             for(int i = 0; i < letrasCertas.Length; i++)
             {
@@ -36,10 +38,13 @@ do
                 {
                     letrasTabuleiro[i] = jogada;
                     acerto = true;
+                    mensagem = "";
+                   
                 }
             }
             if (!acerto)
             {
+                mensagem = $"A letra digitada não existe na palavra-chave: '{jogada}'";
                 vidas--;
             }
         }
@@ -47,6 +52,7 @@ do
         {
             Console.Clear();
             Console.WriteLine($"\nA letra '{jogada}' já foi selecionada! Tente de novo\n");
+            mensagem = "";
             continue;
         }
     }
@@ -112,7 +118,7 @@ void ConstruirTabuleiro(int vida, char[] letraTabuleiro, char[] jogadas)
 {
     Console.WriteLine(" *_____*");
     Console.WriteLine($" |/    '         Vidas: {vidas} - Dica: {tema}"); 
-    Console.WriteLine(" |");
+    Console.WriteLine($"|                {mensagem}                   ");             
     Console.WriteLine(" |");
     Console.WriteLine(" |");
     Console.WriteLine(" |");
