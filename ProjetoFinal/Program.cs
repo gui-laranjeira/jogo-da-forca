@@ -1,4 +1,6 @@
-﻿bool vitoria = false, derrota = false, fim = false;
+﻿using ProjetoFinal;
+
+bool vitoria = false, derrota = false, fim = false;
 int vidas = 6;
 string mensagem="";
 
@@ -18,7 +20,7 @@ string tema = Tema(palavra);
 
 do
 {
-    ConstruirTabuleiro(vidas, letrasTabuleiro, jogadas);
+    Tabuleiro.ConstruirTabuleiro(vidas, letrasTabuleiro, jogadas, tema, mensagem);
 
     char jogada = Jogada();
 
@@ -44,7 +46,7 @@ do
             }
             if (!acerto)
             {
-                mensagem = $"A letra digitada não existe na palavra-chave: '{jogada}'";
+                mensagem = $"A letra '{jogada}' não existe na palavra-chave!";
                 vidas--;
             }
         }
@@ -114,27 +116,7 @@ char[] ConstruirArrayDoTabuleiro(char[] letrasTabuleiro)
     return letrasTabuleiro; 
 }
 
-void ConstruirTabuleiro(int vida, char[] letraTabuleiro, char[] jogadas)
-{
-    Console.WriteLine(" *_____*");
-    Console.WriteLine($" |/    '         Vidas: {vidas} - Dica: {tema}"); 
-    Console.WriteLine($"|                {mensagem}                   ");             
-    Console.WriteLine(" |");
-    Console.WriteLine(" |");
-    Console.WriteLine(" |");
-    Console.Write(" |");
 
-    foreach (var a in letrasTabuleiro)
-    {
-        Console.Write(a + " ");
-    }
-
-    Console.Write("\nLetras escolhidas =  ");
-    foreach (var b in jogadas)
-    {
-        Console.Write(b + " ");
-    }
-}
 
 char Jogada()
 {
