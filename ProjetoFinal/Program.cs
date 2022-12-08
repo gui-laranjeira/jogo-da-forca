@@ -24,24 +24,26 @@ do
 
     char jogada = BaseJogo.Jogada();
 
-    if (Validacao.LetraValida(jogada))
+    try
     {
+        Validacao.LetraValida(jogada);
+
         if (!jogadas.Contains(jogada))
         {
-            
+
             jogadas[iterador] = jogada;
             iterador++;
             bool acerto = false;
-            
 
-            for(int i = 0; i < letrasCertas.Length; i++)
+
+            for (int i = 0; i < letrasCertas.Length; i++)
             {
                 if (letrasCertas[i] == jogada)
                 {
                     letrasTabuleiro[i] = jogada;
                     acerto = true;
                     mensagem = "";
-                   
+
                 }
             }
             if (!acerto)
@@ -58,13 +60,13 @@ do
             continue;
         }
     }
-    else
+    catch (Exception e)
     {
         Console.Clear();
-        Console.WriteLine($"\n'{jogada}' não é uma letra do alfabeto. Por favor, insira uma letra do alfabeto válida!\n");
+        Console.WriteLine(e.Message);
         continue;
     }
-
+         
     Console.Clear();
 
     //Verifica se o jogo acabou

@@ -18,8 +18,8 @@ namespace ProjetoFinal
                     "PIZZA", "CANECA", "GARFO", "ESCUMADEIRA","PANELA","PEDIATRA","OFTALMOLOGISTA","CARDIOLOGISTA","NEUROLOGISTA"};
 
             //teste de commit
-
-            return palavras[rd.Next(palavras.Length)];
+            var ramdom = rd.Next(palavras.Length - 1);
+            return palavras[ramdom];
         }
 
         public static char[] ConstruirArrayDoTabuleiro(char[] letrasTabuleiro)
@@ -98,7 +98,9 @@ namespace ProjetoFinal
             {
                 Console.WriteLine("\n\n\nDigite uma letra:");
                 string jogadaString = Console.ReadLine().ToUpper();
+
                 convert = char.TryParse(jogadaString, out char jogada);
+
                 return jogada;
             } while (!convert);
         }
